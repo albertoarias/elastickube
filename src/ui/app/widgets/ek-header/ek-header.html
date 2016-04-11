@@ -15,9 +15,7 @@
             <md-icon class="ek-header__location__help__icon" md-svg-src="{{:: icons.IC_HELP_48PX }}"></md-icon>
         </md-button>
 
-        <md-button class="ek-header__location__more md-icon-button" aria-label="More">
-            <md-icon class="ek-header__location__more__icon" md-svg-src="{{:: icons.IC_MORE_VERT_48PX }}"></md-icon>
-        </md-button>
+        <ek-header-more-options></ek-header-more-options>
 
         <ek-avatar class="ek-header__location__avatar"
                    ng-click="ctrl.logout()"

@@ -39,22 +39,22 @@ class DropDirective extends Directive {
         tElement.addClass('ek-drop');
 
         return {
-            post: ($scope) => {
-                $scope.ctrl.drop = new Drop({
-                    target: $scope.ctrl.target,
-                    content: $scope.ctrl.content,
+            post: ($scope, $elem, attr, ctrl) => {
+                ctrl.drop = new Drop({
+                    target: ctrl.target,
+                    content: ctrl.content,
                     constraintToWindow: true,
                     constrainToScrollParent: true,
-                    openOn: $scope.ctrl.openOn || 'click',
-                    position: $scope.ctrl.targetPosition || 'bottom left',
-                    remove: $scope.ctrl.remove === 'true',
+                    openOn: ctrl.openOn || 'click',
+                    position: ctrl.targetPosition || 'bottom left',
+                    remove: ctrl.remove === 'true',
                     tetherOptions: {
-                        attachment: $scope.ctrl.position || 'top right'
+                        attachment: ctrl.position || 'top right'
                     }
                 });
 
                 $scope.$on('$destroy', () => {
-                    $scope.ctrl.drop.destroy();
+                    ctrl.drop.destroy();
                 });
             }
         };

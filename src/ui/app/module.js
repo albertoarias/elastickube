@@ -21,6 +21,7 @@ import layoutModule from 'layout/module';
 import widgetsModule from 'widgets/module';
 
 import adminModule from 'admin/module';
+import documentationModule from 'documentation/module';
 import instancesModule from 'instances/module';
 import loginModule from 'login/module';
 import chartsModule from 'charts/module';
@@ -44,6 +45,7 @@ angular
 
         /* Feature areas */
         adminModule,
+        documentationModule,
         instancesModule,
         loginModule,
         chartsModule

@@ -33,6 +33,7 @@ const webpackConfig = {
             'angular-aria',
             'angular-material',
             'angular-cookies',
+            'angular-messages',
             'angular-password',
             'angular-sanitize',
             'angular-ui-router',
@@ -75,7 +76,7 @@ const webpackConfig = {
             },
             {
                 test: /\.(eot|woff2?|ttf|svg)$/i,
-                include: /\/(fonts|angular-ui-grid)\//,
+                include: /\/(fonts)\//,
                 loader: 'file?name=assets/fonts/[name]-[hash].[ext]'
             }
         ]

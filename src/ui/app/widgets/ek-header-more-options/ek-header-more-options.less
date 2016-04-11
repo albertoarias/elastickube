@@ -1,0 +1,35 @@
+@import "../../colors";
+
+.ek-header-more-options {
+
+    &__drop {
+        margin-top: 10px;
+        &__button {
+            color: @white;
+            &__icon {
+                color: @white;
+            }
+        }
+
+        &__content {
+            width: 250px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                border-style: solid;
+                display: block;
+                width: 0;
+                top: -9px;
+                right: 10px;
+                border-color: @white transparent;
+                border-width: 0 10px 10px;
+            }
+
+            & > div {
+                padding: 0 20px;
+            }
+        }
+    }
+
+}
