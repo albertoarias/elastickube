@@ -18,12 +18,7 @@
   <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
   {% endblock %}
 
-  {# FAVICON #}
-  {% if favicon %}
-    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
-  {% endif %}
-
-  {# CSS #}
+   <link rel="shortcut icon" href="_static/images/favicon.png"/>
 
   {# OPENSEARCH #}
   {% if not embedded %}
@@ -36,9 +31,6 @@
   {% if not READTHEDOCS %}
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
   {% endif %}
-
-  <link rel="stylesheet" href="{{ pathto('_static/css/elastickube.css', 1) }}" type="text/css" />
-  <link rel="stylesheet" href="{{ pathto('_static/css/documentation.css', 1) }}" type="text/css" />
 
   {% for cssfile in extra_css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
@@ -163,7 +155,7 @@
         $('.wy-menu-vertical ul li.current').parent().prev().addClass('active');
         $('.wy-menu-vertical p').click(function() {
             $('.wy-menu-vertical p').removeClass('active');
-            $(this).closest('p').addClass('active'); 
+            $(this).closest('p').addClass('active');
             var checkElement = $(this).next();
             if((checkElement.is('.wy-menu-vertical ul')) && (checkElement.is(':visible'))) {
                 $(this).closest('.wy-menu-vertical p').removeClass('active');
@@ -176,8 +168,8 @@
             if($(this).closest('.wy-menu-vertical p').find('ul').children().length == 0) {
                 return true;
             } else {
-                return false; 
-            }   
+                return false;
+            }
         });
       });
     </script>

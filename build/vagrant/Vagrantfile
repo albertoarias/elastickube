@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     :disabled       => false,
     :type           => "rsync",
     :rsync__auto    => true,
-    :rsync__exclude => ["src/build", "node_modules"]
+    :rsync__exclude => ["src/build", "node_modules", "docs/*/build"]
 
   config.vm.network :private_network, ip: "10.107.56.115"
   config.ssh.username = "vagrant"

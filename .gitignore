@@ -11,6 +11,7 @@
 
 # python files
 *.py[cod]
+/docs/k8s_theme/build
 
 # src files
 node_modules
